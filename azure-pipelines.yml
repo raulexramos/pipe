@@ -7,14 +7,12 @@ pool:
 variables:
     imageName: 'pipelines-javascript-docker'
 
-instalandoDocker:
+steps:
 - task: DockerInstaller@0
   displayName: Docker Installer
   inputs:
     dockerVersion: 17.09.0-ce
     releaseType: stable
-
-steps:
 -   task: Docker@2
     displayName: Build an image
     inputs:
